@@ -1,12 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://rseshan.github.com/blog/2013/02/05/hello-world/</loc>
+        <lastmod>2013-02-05T17:22:56-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://rseshan.github.com/blog/archives/</loc>
-        <lastmod>2013-02-05T16:49:37-05:00</lastmod>
+        <lastmod>2013-02-05T17:22:56-05:00</lastmod>
     </url>
     <url>
         <loc>http://rseshan.github.com/</loc>
-        <lastmod>2013-02-05T16:49:37-05:00</lastmod>
+        <lastmod>2013-02-05T17:22:56-05:00</lastmod>
     </url>
     <url>
         <loc>http://rseshan.github.com/robots.txt</loc>
