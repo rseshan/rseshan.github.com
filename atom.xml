@@ -4,7 +4,7 @@
   <title><![CDATA[Margin of Safety]]></title>
   <link href="http://rseshan.github.com/atom.xml" rel="self"/>
   <link href="http://rseshan.github.com/"/>
-  <updated>2013-02-05T17:41:41-05:00</updated>
+  <updated>2013-02-12T07:02:54-05:00</updated>
   <id>http://rseshan.github.com/</id>
   <author>
     <name><![CDATA[Rahul Seshan]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[5 Reasons I'm Learning to Code]]></title>
+    <link href="http://rseshan.github.com/blog/2013/02/12/5-reasons-im-learning-to-code/"/>
+    <updated>2013-02-12T05:14:00-05:00</updated>
+    <id>http://rseshan.github.com/blog/2013/02/12/5-reasons-im-learning-to-code</id>
+    <content type="html"><![CDATA[<p>Last week, I started as a student at the <a href="http://flatironschool.com/">Flatiron School</a>, a 3-month, full-time, web development program here in NYC.  Why?</p>
+
+<p><strong><p>1. Build something.  </strong>&#8220;I wish someone would create something that would fix problem xyz&#8221; - a commong refrain heard amongst my friend circles.  I&#8217;m tired of saying that, tired of building sand castles in the sky and always waiting for someone else to take action.  I want to turn ideas into reality.  If you can think it, you can code it.</p>
+<strong><p>2. Don&#8217;t be left behind.  </strong>As Marc Andreesen&#8217;s alludes to in his piece <a href="http://online.wsj.com/article/SB10001424053111903480904576512250915629460.html">Why Software is Eating the World</a>, we are becoming a more technology - and specifically, software - dependent society on a daily basis.  A unfortunate by-product is the chasm developing between those who have the aptitude to be part of the transformation and those whose skills are fast becoming antiquated.  Being able to code on even a rudimentary basis will be a new form of literacy, as basic as reading or writing.</p>
+<strong><p>3. Never stop learning.  </strong>My programming acumen prior to starting school was non-existent.  So after developing a skillset in a completely different field, why would I put myself in a situation where I&#8217;m starting from scratch?  I think learning for learning&#8217;s sake is intellectually stimulating and expand&#8217;s one horizons.  I don&#8217;t know what the end result of these 3 months will be, but I&#8217;ve already learned a ton which has already made the experience worth it.</p>
+<strong><p>4. Creative outlet.  </strong>Sadly, I have no artistic talent.  I can&#8217;t draw, and despite what you may have heard about my amazing &#8220;Livin&#8217; on a Prayer&#8221; Karaoke rendition, I can&#8217;t sing either.  I look at coding as a means of expressing myself creatively.</p>
+<strong><p>5. It&#8217;s fun.  </strong>Psychologists refer to <a href="http://en.wikipedia.org/wiki/Flow_(psychology)">flow</a> as a mental state where you&#8217;re fully immersed in an activity, an almost spiritutual state where you lose track of time.  I have the attention span of a 5-year old, and while I&#8217;ve only been doing this for a week, I&#8217;m finding myself spending hours on coding exercises and not realizing how much time I&#8217;m spending.  And despite that, I&#8217;m still enjoying myself.  I get a kick out of breaking down and solving problems, and there are very few feelings like the moment when something clicks.  I like having those moments.  I want more.</p></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
