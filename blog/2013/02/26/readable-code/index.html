@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Noob Tips: Make Your Ruby Code More Readable - Margin of Safety</title>
+  <meta name="author" content="Rahul Seshan">
+
+  
+  <meta name="description" content="Ruby is an expressive and beautiful programming language. Ruby code is supposed to be readable enough that if you gave a non-programmer read basic &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rseshan.github.com/blog/2013/02/26/readable-code/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Margin of Safety" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Margin of Safety</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rseshan.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Noob Tips: Make Your Ruby Code More Readable</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-26T06:29:00-05:00" pubdate data-updated="true">Feb 26<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Ruby is an expressive and beautiful programming language.  Ruby code is supposed to be readable enough that if you gave a non-programmer read basic lines, they&#8217;d be able to figure out what was happening.  Having readable code will benefit you not only today, but when you might need to look back and try to make heads or tails of the code you wrote months or even years ago.  Just as important, those you collaborate with and others who look at your code won&#8217;t curse your name under their breath as they read it.  Unfortunately, as a noob, I repeatedly found ways to mangle and uglify my code.  Don&#8217;t be me.  Here are a few tips to make your code look, read and perform better.</p>
+
+
+
+
+<p><strong>1) Spacing: two (indent), one (commas, colons, semicolons and &#8220;{}&#8221;) and none (&#8220;()&#8221;, &#8220;[]&#8221;).</strong>  Indenting lines with spaces and aligning blocks of code that belong together creates a structure similar to searching through folders and directories.  It makes it easier to follow the logic and for others to read your code.  Don&#8217;t use the hard <em>tab</em> button UNLESS you&#8217;ve changed the functionality of the <em>tab</em> button to just add 2 spaces automatically.  For instance, <a href="http://www.sublimetext.com/docs/2/indentation.html">Sublime (text editor)</a> allows you to set the &#8220;indent&#8221; (pressing <em>tab</em>) to actually generate two spaces instead of a hard tab.</p>
+
+
+<p><img src="http://rseshan.github.com/images/spacing.png"></p>
+
+<p><strong>2) Comments: less is more.</strong>There is a fine line between overcommenting and undercommenting.  Your code should be expressive enough that you shouldn&#8217;t need to comment how it works.  If it&#8217;s not, that&#8217;s a reason to refactor the actual code rather than comment more.  Get rid of old comments, pseudo-code or old commented-out snippets.  So when to comment?  How to use your code and some code author/creator information are good reasons to comment.  When in doubt, err on the side of brevity.</p>
+
+
+
+
+<p><strong>3) 80 character limit and aligning parameters.</strong>  Long lines are hard to read, and cumbersome if you have to scroll horizontally to read them.  Keep your lines short < 80 characters.  If you have a lengthy parameter/argument list, separate them and align them.  You want your reader to read your code from top-to-bottom, not left-to-right.</p>
+<img src="http://rseshan.github.com/images/alignment.png">
+
+<p><strong>4) Naming: variables and methods, Classes and Modules, CONSTANTS.</strong>  Variables and methods should be lowercase, Classes and Modules should be <a href="http://en.wikipedia.org/wiki/CamelCase"><em>CamelCase</em></a> and constants should be all-caps.  Don&#8217;t use variable or method names on the <a href="http://ruby-doc.org/docs/keywords/1.9/">ruby keywords list</a>.  That&#8217;s a recipe for disaster and confusion.</p>
+
+<p><strong>5) Be concise and DRY.</strong>  Don&#8217;t Repeat Yourself is a dictum of the Ruby programming language.  If you see yourself writing the same lines of code over and over, you can probably encapsulate the logic into a single method.  Similarly, don&#8217;t write in 3 lines of code what you could write in one.  Starting out, my initial goal was to just get my program working.  Then, I would reread the code and refactor to make it more concise and reduce redundancies.  The more code I write and reread, the more patterns I see, allowing me to refactor on the fly rather than waiting till the end.</p>
+<img src="http://rseshan.github.com/images/simplify.png">
+
+<p>Use common sense.  You want the code to be consistent, organized, concise and self-explantory.  For more on Ruby style, syntax and conventions, I highly recommend this <a href="https://github.com/bbatsov/ruby-style-guide">Ruby Style guide</a>.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rahul Seshan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-26T06:29:00-05:00" pubdate data-updated="true">Feb 26<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rseshan.github.com/blog/2013/02/26/readable-code/" data-via="rseshan" data-counturl="http://rseshan.github.com/blog/2013/02/26/readable-code/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/20/check-yo-self-before-you-wreck-yo-self/" title="Previous Post: Check Yo <em>Self</em> Before You Wreck Yo <em>Self</em>">&laquo; Check Yo <em>Self</em> Before You Wreck Yo <em>Self</em></a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/26/readable-code/">Noob Tips: Make Your Ruby Code More Readable</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/check-yo-self-before-you-wreck-yo-self/">Check Yo <em>Self</em> Before You Wreck Yo <em>Self</em></a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/12/5-reasons-im-learning-to-code/">5 Reasons I'm Learning to Code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/05/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rseshan">@rseshan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rseshan',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rseshan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rseshan" class="twitter-follow-button" data-show-count="false">Follow @rseshan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rahul Seshan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
